@@ -16,16 +16,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
+
         setContentView(R.layout.activity_main);
         FirebaseMessaging.getInstance().subscribeToTopic("mob");
 
         mFirebasAnalytics = FirebaseAnalytics.getInstance(this);
     }
 
-    public void forcarCrash(View view) {
-        int result = 2 / 0;
-    }
+    
 
     public void clickMe(View view) {
         Bundle params = new Bundle();
